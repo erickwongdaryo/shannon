@@ -1,17 +1,11 @@
 {
-  "name": "shannon",
-  "version": "0.0.0",
+  "name": "project",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "packageManager": "pnpm@10.33.0",
   "scripts": {
-    "build": "turbo run build",
-    "check": "turbo run check",
-    "biome": "biome check .",
-    "biome:fix": "biome check --write .",
-    "clean": "turbo run clean",
-    "temporal:worker": "node apps/worker/dist/temporal/worker.js",
-    "temporal:start": "node apps/worker/dist/temporal/worker.js"
+    "postinstall": "git config core.hooksPath .githooks && chmod +x .githooks/*"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.0.0",
